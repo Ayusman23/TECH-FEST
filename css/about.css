@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:wght@300;400&display=swap');
+
+
+
+.about-us {
+    background-color: #080606;
+    color: #fff;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.text-content h3 {
+    color: #0076fd; /* Vibrant Red-Orange */
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.text-content h1 {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #f6f7f8; /* Bright Gold */
+    margin: 10px 0;
+    text-transform: capitalize;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.text-content h1:hover {
+    color: #ff2200; /* Slightly Darker Gold */
+    transform: translateY(-3px);
+}
+
+.text-content h1 em {
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-family: 'Merriweather', serif;
+    color: #058bf8; /* Goldenrod */
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.text-content h1 em:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.text-content p {
+    font-size: 16px;
+    font-weight:bold;
+    color: #fdfcfb; /* Turquoise Blue */
+    line-height: 1.8;
+    margin-bottom: 10px;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.text-content .cta-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    margin-top:20px;
+    border-radius: 10px;
+    margin-right:-5%;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+    .about-us {
+        padding: 60px 5%;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .text-content {
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    .image-container {
+        max-width: 100%;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .about-us {
+        padding: 50px 5%;
+    }
+
+    .text-content h3 {
+        font-size: 28px;
+    }
+
+    .text-content h1 {
+        font-size: 24px;
+    }
+
+    .image-container {
+        max-width: 100%;
+    }
+}
+
+/* Small Phones */
+@media screen and (max-width: 480px) {
+    .about-us {
+        padding: 40px 5%;
+    }
+
+    .text-content h3 {
+        font-size: 24px;
+    }
+
+    .text-content h1 {
+        font-size: 20px;
+    }
+
+    .text-content p {
+        font-size: 14px;
+    }
+
+    .image-container {
+        max-width: 100%;
+    }
+}

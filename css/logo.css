@@ -1,0 +1,84 @@
+/* Logos Section */
+.logos-container {
+    display: flex;
+    justify-content: space-between; /* Push left and right logos apart */
+    align-items: center;
+    max-width: 1200px;
+    margin: 30px auto -80px;
+    padding: 10px 40px;
+}
+
+/* Styling for left and right logo groups */
+.logos {
+    display: flex;
+    gap:250px; /* Space between logos */
+}
+
+.logos img {
+    width: 100px; /* Set a fixed width for logos */
+    height: auto; /* Maintain aspect ratio */
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3)); /* Add a slight shadow effect */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.logos img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    filter: drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.5));
+}
+
+/* Positioning for left and right logos */
+.logos.left {
+    justify-content: flex-start;
+}
+
+.logos.right {
+    justify-content: flex-end;
+}
+/* Media Query for Tablets */
+@media (max-width: 1024px) {
+    .logos-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 15px;
+    }
+
+    .logos {
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .logos img {
+        width: 80px; /* Adjust logo size for tablets */
+    }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .logos-container {
+        flex-direction: column; /* Stack logos on small screens */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 10px;
+        margin-bottom:20px;
+    }
+
+    .logos {
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap; /* Ensures logos don't overlap */
+        gap: 30px; /* Adjust spacing between logos */
+    }
+
+    .logos.left,
+    .logos.right {
+        justify-content: center; /* Center logos for mobile */
+        width: 100%;
+    }
+
+    .logos img {
+        width: 60px; /* Reduce logo size on mobile */
+    }
+}

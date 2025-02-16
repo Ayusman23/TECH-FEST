@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    opacity: 0; /* Start with the body hidden */
+    animation: fadeIn 1s forwards; /* Fade-in animation on page load */
+    background-image: url('./images/h-3.jpg'); /* Ensure correct path */
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center center; /* Centers the background image */
+    background-repeat: no-repeat; /* Ensures the background image doesn't repeat */
+    background-attachment: fixed;
+    animation: backgroundAnimation 1s ease-out forwards;
+}
+
+
+/* Background Animation */
+@keyframes backgroundAnimation {
+    0% {
+        opacity: 0; /* Start with the background being invisible */
+        transform: scale(1.1); /* Start with a slight zoom-in */
+    }
+    100% {
+        opacity: 1; /* End with the background fully visible */
+        transform: scale(1); /* Reset the zoom to normal */
+    }
+}
+
+/* Header */
+header {
+    background-color: rgba(51, 51, 51, 0.3); /* Semi-transparent background for the blur effect */
+    padding: 15px 0; /* Add more padding for a better visual effect */
+    border-radius: 50px; /* Make the navbar have rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top:10px;
+    z-index: 1000;
+    backdrop-filter: blur(50px); /* Apply the blur effect to the background */
+}
+/* Optional: Ensure content below the header doesn't get hidden behind it */
+body {
+    padding-top: 80px; /* Adjust depending on the height of your header */
+}
+
+
+
+
+

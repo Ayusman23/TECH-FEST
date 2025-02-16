@@ -1,0 +1,128 @@
+
+/* Hero Section */
+.hero {
+    background: url('robotic_background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 150px 0; /* Combined padding for top and bottom */
+    text-align: center; 
+    opacity: 1; /* Initially hidden for animation */
+    animation: fadeIn 1.5s ease-out forwards 0.5s; /* Fade-in with slight delay */
+    margin-bottom:-8.5%;
+}
+
+.hero h2 {
+    margin: -12% auto 10px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 0, 255, 0.5), 
+                 0 0 30px rgba(0, 255, 255, 0.5);
+    animation: glow-flicker 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes glow-flicker {
+    0% {
+        text-shadow: 0 0 8px rgba(0, 119, 255, 0.9), 
+                     0 0 16px rgba(0, 195, 255, 0.6), 
+                     0 0 24px rgba(0, 255, 255, 0.4);
+        opacity: 1;
+    }
+    25% {
+        text-shadow: 0 0 12px rgba(7, 192, 249, 0.8), 
+                     0 0 24px rgba(255, 0, 255, 0.7), 
+                     0 0 32px rgba(0, 255, 255, 0.6);
+        opacity: 0.9;
+    }
+    50% {
+        text-shadow: 0 0 16px rgba(6, 47, 254, 0.7), 
+                     0 0 28px rgba(255, 0, 255, 0.6), 
+                     0 0 36px rgba(0, 255, 255, 0.5);
+        opacity: 1;
+    }
+    75% {
+        text-shadow: 0 0 10px rgba(0, 119, 255, 0.85), 
+                     0 0 20px rgba(0, 195, 255, 0.5), 
+                     0 0 28px rgba(0, 255, 255, 0.4);
+        opacity: 0.95;
+    }
+    100% {
+        text-shadow: 0 0 8px rgba(0, 119, 255, 0.9), 
+                     0 0 16px rgba(0, 195, 255, 0.6), 
+                     0 0 24px rgba(0, 255, 255, 0.4);
+        opacity: 1;
+    }
+}
+
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hero button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 10px;
+    margin-top: 15px; /* Adds spacing from text */
+}
+
+.hero button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+* Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 10vh 4vw;
+    }
+
+    .hero h2 {
+        font-size: 5vw;
+    }
+
+    .timer {
+        font-size: 3.5vw;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .hero {
+        padding: 8vh 3vw;
+    }
+
+    .hero h2 {
+        font-size: 5vw;
+    }
+
+    .timer {
+        font-size: 3vw;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .hero {
+        padding: 6vh 2vw;
+    }
+
+    .hero h2 {
+        font-size: 6vw;
+    }
+
+    .timer {
+        font-size: 4vw;
+        text-align: center;
+    }
+}
