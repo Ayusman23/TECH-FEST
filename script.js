@@ -58,37 +58,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     });
 });
-document.addEventListener("DOMContentLoaded", function () {    // Set the target date (YYYY, MM-1, DD, HH, MM, SS)
-const targetDate = new Date("2025-03-10T00:00:00").getTime();
+document.addEventListener("DOMContentLoaded", function () {
+    // Set the target date (YYYY, MM-1, DD, HH, MM, SS)
+    const targetDate = new Date("2025-03-01T00:00:00").getTime();
 
-function updateCountdown() {
-    const now = new Date().getTime();
-    const timeLeft = targetDate - now;
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
 
-    if (timeLeft > 0) {
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-        // Update HTML elements
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
-        document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
-        document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
-    } else {
-        // If the countdown reaches zero, display a message
-        document.querySelector(".counter").innerHTML = "<h2>Event Started!</h2>";
-        clearInterval(countdownTimer);
+            // Update HTML elements
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+            document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+            document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+        } else {
+            // If the countdown reaches zero, display a message
+            document.querySelector(".counter").innerHTML = "<h2>Event Started!</h2>";
+            clearInterval(countdownTimer);
+        }
     }
-}
-
-// Update countdown every second
-const countdownTimer = setInterval(updateCountdown, 1000);
-
-// Initial call to display countdown immediately
-updateCountdown();
-
 
     // Update countdown every second
     const countdownTimer = setInterval(updateCountdown, 1000);
