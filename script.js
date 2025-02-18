@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
     // Set the target date (YYYY, MM-1, DD, HH, MM, SS)
-    const targetDate = new Date("2025-03-10 T00:00:00").getTime();
+    const targetDate = new Date("2025-03-10T00:00:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
